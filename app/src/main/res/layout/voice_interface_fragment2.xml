@@ -42,7 +42,7 @@
     </LinearLayout>
 
     <RelativeLayout
-
+        android:visibility="gone"
         android:id="@+id/vi_checkbox_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
