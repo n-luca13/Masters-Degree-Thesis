@@ -3,7 +3,6 @@ package com.example.applicazionetesi;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -86,8 +85,6 @@ public class VoiceInterfaceFragment2 extends Fragment {
         SharedPreferences sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
         boolean isChecked = sharedPreferences.getBoolean("dontShowAgain", false);
         if (!isChecked && (intent.equals("#cut") || intent.equals("#delete")) && (startParams.size() == 1 && endParams.size() == 1)){
-            Log.e("startParams", String.valueOf(startParams));
-            Log.e("endParams", String.valueOf(endParams));
             // Prompt di conferma per operazioni di taglia e rimuovi
             checkboxLayout.setVisibility(View.VISIBLE);
             finalStartParams = startParamsCopy;
